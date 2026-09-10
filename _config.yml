@@ -1,0 +1,12 @@
+title: 黎山
+description: Personal academic website and engineering portfolio
+
+url: "https://nanaaichs.github.io"
+baseurl: ""
+
+author:
+  name: 黎山
+
+lang: zh-CN
+
+markdown: kramdown
