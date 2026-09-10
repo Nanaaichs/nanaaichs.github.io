@@ -1,0 +1,48 @@
+- id: nr-ntn
+  title: 5G NR Non-Terrestrial Networks
+  order: 1
+  summary: >
+    NR NTN access, synchronization, Doppler compensation, physical channels,
+    receiver processing, and satellite-terrestrial integration.
+  topics:
+    - Initial access and system information
+    - SSB, PBCH, PDCCH, PDSCH and PRACH
+    - Doppler estimation and compensation
+    - Timing and frequency synchronization
+    - Receiver algorithms and end-to-end simulation
+
+- id: leo-satellite
+  title: LEO Satellite Communications
+  order: 2
+  summary: >
+    Communication-system behavior under rapidly varying LEO satellite-ground geometry,
+    propagation delay, Doppler, and mobility.
+  topics:
+    - Dynamic satellite-ground geometry
+    - Propagation delay and Doppler dynamics
+    - Coverage and link availability
+    - Satellite-terrestrial integrated networking
+
+- id: physical-layer
+  title: Physical-Layer Signal Processing
+  order: 3
+  summary: >
+    OFDM receiver processing for synchronization, channel estimation, phase tracking,
+    equalization, and soft demodulation.
+  topics:
+    - OFDM synchronization
+    - Channel estimation
+    - Phase tracking
+    - Equalization and receiver design
+
+- id: satellite-standards
+  title: Satellite Communication Systems and Standards
+  order: 4
+  summary: >
+    Study and simulation of standardized satellite communication systems and their
+    relationship with terrestrial mobile networks.
+  topics:
+    - 3GPP NR NTN
+    - DVB-S2
+    - DVB-RCS
+    - System-level and link-level simulation

@@ -1,0 +1,31 @@
+- category: Communication Systems
+  items:
+    - 5G NR
+    - NR NTN
+    - OFDM
+    - Satellite Communications
+    - DVB-S2
+    - DVB-RCS
+
+- category: Programming
+  items:
+    - C
+    - C++
+    - MATLAB
+    - Python
+
+- category: Software and Tools
+  items:
+    - Qt
+    - SQLite
+    - Git
+    - GitHub
+    - VS Code
+    - qmake
+
+- category: Engineering
+  items:
+    - Communication-System Simulation
+    - Physical-Layer Signal Processing
+    - UDP Network Programming
+    - Protocol Parsing
