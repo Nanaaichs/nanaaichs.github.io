@@ -1,0 +1,101 @@
+- id: leo-ntn-access
+  name: LEO NTN Full Access Simulation
+  category: Research
+  period: "2026 - Present"
+  status: Active
+  featured: true
+
+  summary: >
+    End-to-end simulation of 5G NR NTN access procedures
+    and physical-layer transmission in LEO satellite scenarios.
+
+  role: >
+    Physical-layer modeling, synchronization,
+    access procedure simulation and system integration.
+
+  technologies:
+    - MATLAB
+    - 5G NR
+    - NTN
+    - OFDM
+    - 5G Toolbox
+
+  highlights:
+    - SSB and PBCH processing
+    - PRACH random access
+    - PDCCH and PDSCH transmission
+    - Doppler compensation and synchronization
+    - Channel estimation and equalization
+
+  github: ""
+  demo: ""
+  report: ""
+
+
+- id: dvb-s2-simulator
+  name: DVB-S2 Link Simulator
+  category: Research
+  period: "2026"
+  status: Active
+  featured: true
+
+  summary: >
+    Physical-layer simulation platform for DVB-S2 satellite
+    communication links, including synchronization,
+    modulation and receiver processing.
+
+  role: >
+    Link-level modeling, receiver design,
+    visualization and simulation integration.
+
+  technologies:
+    - MATLAB
+    - DVB-S2
+    - Satellite Communications
+    - Signal Processing
+
+  highlights:
+    - Frequency synchronization
+    - Phase synchronization
+    - Frame synchronization
+    - Channel impairment simulation
+    - Dynamic visualization
+
+  github: ""
+  demo: ""
+  report: ""
+
+
+- id: citel-t-007
+  name: CITEL-T-007 Protocol Sender
+  category: Engineering
+  period: "2026"
+  status: Completed
+  featured: true
+
+  summary: >
+    Desktop protocol generation and transmission application
+    developed with C++ and Qt.
+
+  role: >
+    Software architecture, protocol parsing,
+    UDP transmission, data generation and persistence.
+
+  technologies:
+    - C++
+    - Qt
+    - UDP
+    - SQLite
+    - XML
+    - qmake
+
+  highlights:
+    - XML protocol parsing
+    - Configurable data generation
+    - UDP packet transmission
+    - SQLite transmission records
+    - GUI-based workflow
+
+  github: ""
+  demo: ""
+  report: ""
