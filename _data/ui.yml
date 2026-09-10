@@ -1,0 +1,150 @@
+en:
+  language_switch: 中文
+  home:
+    eyebrow: Academic Profile · Engineering Portfolio
+    research_eyebrow: Research
+    research_title: Current Research
+    projects_eyebrow: Portfolio
+    projects_title: Featured Projects
+    publications_eyebrow: Academic Output
+    publications_title: Selected Publications
+    awards_eyebrow: Recognition
+    awards_title: Selected Awards
+    writing_eyebrow: Writing
+    writing_title: Recent Writing
+    view_all: View all →
+    research_button: Research
+    projects_button: Projects
+    publications_button: Publications
+  research:
+    eyebrow: Research
+    title: Research
+    lead: My research centers on satellite communications, 5G NR Non-Terrestrial Networks, and physical-layer receiver design.
+  projects:
+    eyebrow: Portfolio
+    title: Projects
+    lead: Selected research, engineering, and software projects. Each project records the problem, my contribution, implementation, results, and public evidence.
+    view_project: View Project →
+  publications:
+    eyebrow: Academic Output
+    title: Publications
+    lead: Journal articles, letters, conference papers, patents, and other academic outputs are maintained here with their actual status.
+    empty: Publication records will be added here.
+  experience:
+    eyebrow: Experience
+    title: Experience
+    lead: Research, engineering, internship, teaching, leadership, and professional experience.
+  awards:
+    eyebrow: Recognition
+    title: Awards & Honors
+    lead: Awards, scholarships, competition honors, and other recognition. Public entries contain only information suitable for disclosure.
+    empty: Awards and honors will be added here.
+  writing:
+    eyebrow: Knowledge Base
+    title: Writing
+    lead: Technical articles, research notes, tutorials, and industry analysis. Chinese and English articles may be maintained independently.
+    empty: No public articles in this language yet.
+  about:
+    eyebrow: About
+    title: About Me
+    education: Education
+    skills: Technical Skills
+    links: Links
+    advisor: Advisor
+    thesis: Thesis
+  project:
+    eyebrow: Project
+    overview: Overview
+    problem: Problem
+    contribution: My Contribution
+    scope: System Scope
+    features: Key Features
+    architecture: Architecture
+    outcomes: Outcomes
+    evidence: Evidence to Add
+    related_publications: Related Publications
+    related_awards: Related Awards
+    links: Links
+    back: ← Back to Projects
+  post:
+    eyebrow: Writing
+    back: ← Back to Writing
+  not_found:
+    title: Page Not Found
+    body: The page you requested does not exist or has moved.
+    home: Return to Home →
+zh:
+  language_switch: EN
+  home:
+    eyebrow: 学术主页 · 工程作品集
+    research_eyebrow: 研究
+    research_title: 当前研究方向
+    projects_eyebrow: 项目作品集
+    projects_title: 代表项目
+    publications_eyebrow: 学术成果
+    publications_title: 代表性论文
+    awards_eyebrow: 荣誉
+    awards_title: 代表性奖项
+    writing_eyebrow: 文章
+    writing_title: 最新文章
+    view_all: 查看全部 →
+    research_button: 研究方向
+    projects_button: 项目
+    publications_button: 论文成果
+  research:
+    eyebrow: 研究
+    title: 研究方向
+    lead: 研究工作主要围绕卫星通信、5G NR 非地面网络（NTN）以及物理层接收机设计展开。
+  projects:
+    eyebrow: 项目作品集
+    title: 项目
+    lead: 展示科研、工程与软件项目。每个项目重点记录所解决的问题、个人贡献、实现方法、成果与可公开证据。
+    view_project: 查看项目 →
+  publications:
+    eyebrow: 学术成果
+    title: 论文成果
+    lead: 在此维护期刊论文、Letters、会议论文、专利及其他学术成果，并准确标注实际状态。
+    empty: 暂无公开论文记录，后续将在此更新。
+  experience:
+    eyebrow: 经历
+    title: 经历
+    lead: 维护科研、工程、实习、教学、团队服务及其他专业经历。
+  awards:
+    eyebrow: 荣誉
+    title: 奖项与荣誉
+    lead: 维护奖学金、竞赛奖项及其他荣誉。公开内容仅保留适合对外披露的信息。
+    empty: 暂无公开奖项记录，后续将在此更新。
+  writing:
+    eyebrow: 知识库
+    title: 文章
+    lead: 技术文章、科研笔记、教程与产业分析。中英文文章无需强制逐篇互译，可分别维护。
+    empty: 当前暂无该语言的公开文章。
+  about:
+    eyebrow: 关于
+    title: 关于我
+    education: 教育经历
+    skills: 技术栈
+    links: 链接
+    advisor: 导师
+    thesis: 论文题目
+  project:
+    eyebrow: 项目
+    overview: 项目概述
+    problem: 问题背景
+    contribution: 个人贡献
+    scope: 系统范围
+    features: 关键功能
+    architecture: 系统架构
+    outcomes: 主要成果
+    evidence: 后续公开材料
+    related_publications: 关联论文
+    related_awards: 关联奖项
+    links: 公开链接
+    back: ← 返回项目列表
+  post:
+    eyebrow: 文章
+    back: ← 返回文章列表
+  not_found:
+    title: 页面不存在
+    body: 你访问的页面不存在或已经移动。
+    home: 返回首页 →

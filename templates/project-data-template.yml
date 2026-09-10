@@ -1,0 +1,54 @@
+- id: project-id
+  slug: project-slug
+  order: 99
+  featured: false
+  urls:
+    en: /projects/project-slug/
+    zh: /zh/projects/project-slug/
+  title:
+    en: Project Title
+    zh: 项目名称
+  category:
+    en: Research
+    zh: 科研
+  period:
+    en: '2027'
+    zh: '2027'
+  status:
+    en: Active
+    zh: 进行中
+  summary:
+    en: ''
+    zh: ''
+  technologies:
+  - MATLAB
+  overview:
+    en: ''
+    zh: ''
+  problem:
+    en: ''
+    zh: ''
+  contribution:
+    en:
+    - ''
+    zh:
+    - ''
+  scope:
+    en:
+    - ''
+    zh:
+    - ''
+  outcomes:
+    en:
+    - ''
+    zh:
+    - ''
+  evidence:
+    en: ''
+    zh: ''
+  related_publications: []
+  related_awards: []
+  links:
+    github: ''
+    demo: ''
+    report: ''

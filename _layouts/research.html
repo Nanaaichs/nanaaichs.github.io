@@ -1,0 +1,8 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: 'en' %}{% assign ui = site.data.ui[lang] %}
+<div class="container page-shell"><p class="eyebrow">{{ ui.research.eyebrow }}</p><h1>{{ ui.research.title }}</h1><p class="lead">{{ ui.research.lead }}</p>
+{% assign sorted_research = site.data.research | sort: "order" %}<div class="stack-list large-gap">
+{% for item in sorted_research %}<article class="research-block"><h2>{{ item.title[lang] }}</h2><p>{{ item.summary[lang] }}</p><ul>{% for topic in item.topics[lang] %}<li>{{ topic }}</li>{% endfor %}</ul></article>{% endfor %}
+</div></div>

@@ -1,0 +1,6 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: 'en' %}{% assign ui = site.data.ui[lang] %}
+<div class="container page-shell"><p class="eyebrow">{{ ui.publications.eyebrow }}</p><h1>{{ ui.publications.title }}</h1><p class="lead">{{ ui.publications.lead }}</p>
+{% if site.data.publications == empty %}<p class="empty-state">{{ ui.publications.empty }}</p>{% else %}<div class="stack-list">{% assign sorted_publications = site.data.publications | sort: "year" | reverse %}{% for publication in sorted_publications %}<article class="list-item publication-item"><p class="meta">{{ publication.type[lang] }} · {{ publication.year }} · {{ publication.status[lang] }}</p><h2>{{ publication.title[lang] }}</h2><p>{{ publication.authors }}</p><p><em>{{ publication.venue }}</em></p><p class="link-row">{% if publication.doi != '' %}<a href="{{ publication.doi }}">DOI</a>{% endif %}{% if publication.pdf != '' %}<a href="{{ publication.pdf }}">PDF</a>{% endif %}{% if publication.code != '' %}<a href="{{ publication.code }}">Code</a>{% endif %}</p></article>{% endfor %}</div>{% endif %}</div>

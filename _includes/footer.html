@@ -1,11 +1,11 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign profile = site.data.profile %}
 <footer class="site-footer">
   <div class="container footer-wrap">
-    <span>© {{ site.time | date: "%Y" }} {{ site.author.name }}</span>
+    <span>© {{ site.time | date: "%Y" }} {{ profile.name[lang] }}</span>
     <span class="footer-links">
       {% for link in site.data.links %}
-        {% if link.enabled %}
-          <a href="{{ link.url }}">{{ link.name }}</a>
-        {% endif %}
+        {% if link.enabled %}<a href="{{ link.url }}">{{ link.name[lang] }}</a>{% endif %}
       {% endfor %}
     </span>
   </div>

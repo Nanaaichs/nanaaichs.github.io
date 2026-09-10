@@ -1,10 +1,24 @@
-- degree: Ph.D. Student
-  field: ""
-  institution: Beijing Jiaotong University
-  location: Beijing, China
-  period: Present
-  description: >
-    Research in satellite communications, 5G NR NTN, physical-layer signal processing,
-    and communication-system simulation.
-  advisor: ""
-  thesis: ""
+- degree:
+    en: Ph.D. Student
+    zh: 博士研究生
+  field:
+    en: ''
+    zh: ''
+  institution:
+    en: Beijing Jiaotong University
+    zh: 北京交通大学
+  location:
+    en: Beijing, China
+    zh: 中国 · 北京
+  period:
+    en: Present
+    zh: 在读
+  description:
+    en: Research in satellite communications, 5G NR NTN, physical-layer signal processing, and communication-system simulation.
+    zh: 研究方向包括卫星通信、5G NR NTN、物理层信号处理与通信系统仿真。
+  advisor:
+    en: ''
+    zh: ''
+  thesis:
+    en: ''
+    zh: ''

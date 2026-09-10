@@ -1,0 +1,8 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: 'en' %}{% assign ui = site.data.ui[lang] %}
+<div class="container page-shell"><p class="eyebrow">{{ ui.projects.eyebrow }}</p><h1>{{ ui.projects.title }}</h1><p class="lead">{{ ui.projects.lead }}</p>
+{% assign sorted_projects = site.data.projects | sort: "order" %}<div class="card-grid">
+{% for project in sorted_projects %}<article class="card project-card"><p class="meta">{{ project.category[lang] }} · {{ project.period[lang] }} · {{ project.status[lang] }}</p><h2><a href="{{ project.urls[lang] | relative_url }}">{{ project.title[lang] }}</a></h2><p>{{ project.summary[lang] }}</p><div class="tag-row">{% for tech in project.technologies %}<span class="tag">{{ tech }}</span>{% endfor %}</div><p class="card-link"><a href="{{ project.urls[lang] | relative_url }}">{{ ui.projects.view_project }}</a></p></article>{% endfor %}
+</div></div>

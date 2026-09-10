@@ -1,10 +1,24 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign profile = site.data.profile %}
+{% assign nav_items = site.data.navigation[lang] %}
+{% assign ui = site.data.ui[lang] %}
+{% assign site_name = profile.name[lang] %}
+{% assign switch_url = page.alternate_url %}
+{% if switch_url == nil or switch_url == '' %}
+  {% if lang == 'zh' %}{% assign switch_url = '/' %}{% else %}{% assign switch_url = '/zh/' %}{% endif %}
+{% endif %}
 <header class="site-header">
   <div class="container nav-wrap">
-    <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    {% if lang == 'zh' %}
+      <a class="site-name" href="{{ '/zh/' | relative_url }}">{{ site_name }}</a>
+    {% else %}
+      <a class="site-name" href="{{ '/' | relative_url }}">{{ site_name }}</a>
+    {% endif %}
     <nav class="nav-links" aria-label="Primary navigation">
-      {% for item in site.data.navigation %}
-        <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+      {% for item in nav_items %}
+        <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.name }}</a>
       {% endfor %}
+      <a class="language-switch" href="{{ switch_url | relative_url }}">{{ ui.language_switch }}</a>
     </nav>
   </div>
 </header>

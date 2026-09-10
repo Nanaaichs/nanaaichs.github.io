@@ -1,48 +1,78 @@
 - id: nr-ntn
-  title: 5G NR Non-Terrestrial Networks
   order: 1
-  summary: >
-    NR NTN access, synchronization, Doppler compensation, physical channels,
-    receiver processing, and satellite-terrestrial integration.
+  title:
+    en: 5G NR Non-Terrestrial Networks
+    zh: 5G NR 非地面网络（NTN）
+  summary:
+    en: NR NTN access, synchronization, Doppler compensation, physical channels, receiver processing, and satellite-terrestrial integration.
+    zh: 研究 NR NTN 接入、同步、多普勒补偿、物理信道、接收机处理以及卫星与地面网络融合。
   topics:
+    en:
     - Initial access and system information
     - SSB, PBCH, PDCCH, PDSCH and PRACH
     - Doppler estimation and compensation
     - Timing and frequency synchronization
     - Receiver algorithms and end-to-end simulation
-
+    zh:
+    - 初始接入与系统信息获取
+    - SSB、PBCH、PDCCH、PDSCH 与 PRACH
+    - 多普勒估计与补偿
+    - 定时与频率同步
+    - 接收机算法与端到端仿真
 - id: leo-satellite
-  title: LEO Satellite Communications
   order: 2
-  summary: >
-    Communication-system behavior under rapidly varying LEO satellite-ground geometry,
-    propagation delay, Doppler, and mobility.
+  title:
+    en: LEO Satellite Communications
+    zh: 低轨卫星通信
+  summary:
+    en: Communication-system behavior under rapidly varying LEO satellite-ground geometry, propagation delay, Doppler, and mobility.
+    zh: 研究快速变化的低轨卫星—地面几何关系、传播时延、多普勒与移动性条件下的通信系统行为。
   topics:
+    en:
     - Dynamic satellite-ground geometry
     - Propagation delay and Doppler dynamics
     - Coverage and link availability
     - Satellite-terrestrial integrated networking
-
+    zh:
+    - 动态星地几何关系
+    - 传播时延与多普勒动态
+    - 覆盖与链路可用性
+    - 卫星—地面融合组网
 - id: physical-layer
-  title: Physical-Layer Signal Processing
   order: 3
-  summary: >
-    OFDM receiver processing for synchronization, channel estimation, phase tracking,
-    equalization, and soft demodulation.
+  title:
+    en: Physical-Layer Signal Processing
+    zh: 物理层信号处理
+  summary:
+    en: OFDM receiver processing for synchronization, channel estimation, phase tracking, equalization, and soft demodulation.
+    zh: 面向 OFDM 接收机的同步、信道估计、相位跟踪、均衡与软解调处理。
   topics:
+    en:
     - OFDM synchronization
     - Channel estimation
     - Phase tracking
     - Equalization and receiver design
-
+    zh:
+    - OFDM 同步
+    - 信道估计
+    - 相位跟踪
+    - 均衡与接收机设计
 - id: satellite-standards
-  title: Satellite Communication Systems and Standards
   order: 4
-  summary: >
-    Study and simulation of standardized satellite communication systems and their
-    relationship with terrestrial mobile networks.
+  title:
+    en: Satellite Communication Systems and Standards
+    zh: 卫星通信系统与标准
+  summary:
+    en: Study and simulation of standardized satellite communication systems and their relationship with terrestrial mobile networks.
+    zh: 研究并仿真标准化卫星通信系统，以及其与地面移动通信网络的融合关系。
   topics:
+    en:
     - 3GPP NR NTN
     - DVB-S2
     - DVB-RCS
     - System-level and link-level simulation
+    zh:
+    - 3GPP NR NTN
+    - DVB-S2
+    - DVB-RCS
+    - 系统级与链路级仿真

@@ -1,0 +1,7 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: 'en' %}{% assign ui = site.data.ui[lang] %}
+<div class="container page-shell"><p class="eyebrow">{{ ui.experience.eyebrow }}</p><h1>{{ ui.experience.title }}</h1><p class="lead">{{ ui.experience.lead }}</p><div class="stack-list large-gap">
+{% for experience in site.data.experience %}<article class="timeline-item"><p class="meta">{{ experience.type[lang] }}{% if experience.period %} · {{ experience.period[lang] }}{% endif %}</p><h2>{{ experience.title[lang] }}</h2><p><strong>{{ experience.organization[lang] }}</strong>{% if experience.location %} · {{ experience.location[lang] }}{% endif %}</p><p>{{ experience.summary[lang] }}</p>{% if experience.responsibilities %}<ul>{% for item in experience.responsibilities[lang] %}<li>{{ item }}</li>{% endfor %}</ul>{% endif %}</article>{% endfor %}
+</div></div>

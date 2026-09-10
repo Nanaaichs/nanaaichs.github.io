@@ -1,0 +1,257 @@
+- id: leo-ntn-access
+  slug: leo-ntn-access
+  order: 1
+  featured: true
+  urls:
+    en: /projects/leo-ntn-access/
+    zh: /zh/projects/leo-ntn-access/
+  title:
+    en: LEO NTN Full Access Simulation
+    zh: LEO NTN 全流程接入仿真
+  category:
+    en: Research
+    zh: 科研
+  period:
+    en: 2026 - Present
+    zh: 2026 - 至今
+  status:
+    en: Active
+    zh: 进行中
+  summary:
+    en: End-to-end simulation of 5G NR NTN access procedures and physical-layer transmission in LEO satellite scenarios.
+    zh: 面向低轨卫星场景的 5G NR NTN 端到端接入流程与物理层传输仿真。
+  technologies:
+  - MATLAB
+  - 5G Toolbox
+  - 5G NR
+  - NTN
+  - OFDM
+  overview:
+    en: This project develops an end-to-end simulation framework for 5G NR Non-Terrestrial Networks in LEO satellite scenarios. The scope covers initial access, downlink physical channels, and receiver-side synchronization and compensation.
+    zh: 本项目面向低轨卫星场景构建 5G NR 非地面网络端到端仿真框架，覆盖初始接入、下行物理信道以及接收端同步与补偿处理。
+  problem:
+    en: LEO satellite communication introduces large propagation delay, strong and time-varying Doppler shift, and rapidly changing satellite-ground geometry. The project studies how NR physical-layer procedures operate under these NTN-specific conditions.
+    zh: 低轨卫星通信具有较大的传播时延、强且快速变化的多普勒频移，以及持续变化的星地几何关系。本项目研究 NR 物理层流程在这些 NTN 特有条件下的工作方式与补偿方法。
+  contribution:
+    en:
+    - Physical-layer system modeling and simulation
+    - NTN access-procedure integration
+    - Doppler modeling and compensation
+    - Timing and carrier-frequency synchronization
+    - Channel estimation, phase tracking, and equalization
+    - System visualization and reproducible simulation workflows
+    zh:
+    - 物理层系统建模与仿真
+    - NTN 接入流程集成
+    - 多普勒建模与补偿
+    - 定时与载波频率同步
+    - 信道估计、相位跟踪与均衡
+    - 系统可视化与可复现实验流程
+  scope:
+    en:
+    - SSB transmission and detection
+    - PBCH processing and system-information acquisition
+    - PRACH random access
+    - PDCCH and PDSCH processing
+    - Doppler pre-compensation and residual CFO estimation
+    - OFDM demodulation
+    - DM-RS/PT-RS-assisted receiver processing
+    - MMSE equalization and soft demodulation
+    zh:
+    - SSB 发送与检测
+    - PBCH 处理与系统信息获取
+    - PRACH 随机接入
+    - PDCCH 与 PDSCH 处理
+    - 多普勒预补偿与残余 CFO 估计
+    - OFDM 解调
+    - DM-RS/PT-RS 辅助接收处理
+    - MMSE 均衡与软解调
+  outcomes:
+    en:
+    - End-to-end NTN access-procedure simulation framework
+    - Receiver chain covering Doppler compensation, synchronization, channel estimation, and equalization
+    zh:
+    - 形成端到端 NTN 接入流程仿真框架
+    - 形成覆盖多普勒补偿、同步、信道估计与均衡的接收机处理链
+  evidence:
+    en: When public material is available, add architecture figures, representative simulation results, a report, code repository, and any related publication or competition outcome.
+    zh: 后续在材料适合公开时补充系统架构图、代表性仿真结果、报告、代码仓库，以及关联论文或竞赛成果。
+  related_publications: []
+  related_awards: []
+  links:
+    github: ''
+    demo: ''
+    report: ''
+- id: dvb-s2-simulator
+  slug: dvb-s2-simulator
+  order: 2
+  featured: true
+  urls:
+    en: /projects/dvb-s2-simulator/
+    zh: /zh/projects/dvb-s2-simulator/
+  title:
+    en: DVB-S2 Link Simulator
+    zh: DVB-S2 链路仿真器
+  category:
+    en: Research
+    zh: 科研
+  period:
+    en: '2026'
+    zh: '2026'
+  status:
+    en: Active
+    zh: 进行中
+  summary:
+    en: Physical-layer simulation platform for DVB-S2 satellite communication links, including synchronization, modulation, channel impairment, and receiver processing.
+    zh: 面向 DVB-S2 卫星通信链路的物理层仿真平台，覆盖调制、信道损伤、同步与接收机处理。
+  technologies:
+  - MATLAB
+  - DVB-S2
+  - Synchronization
+  - Signal Processing
+  overview:
+    en: A DVB-S2 physical-layer simulation platform for studying satellite communication links and receiver algorithms, with dynamic visualization of synchronization and receiver states.
+    zh: 构建 DVB-S2 物理层链路仿真平台，用于研究卫星通信链路与接收机算法，并对同步过程与接收机状态进行动态可视化。
+  problem:
+    en: A useful link simulator should expose not only the final constellation or BER result, but also the receiver acquisition process and the impact of frequency, phase, frame, and channel impairments.
+    zh: 链路仿真不仅需要给出最终星座图或误码结果，还应能够呈现频率、相位、帧同步以及信道损伤对接收机捕获过程的影响。
+  contribution:
+    en:
+    - Link-level system modeling
+    - Frequency synchronization
+    - Phase synchronization
+    - Frame synchronization
+    - Channel impairment simulation
+    - Receiver visualization and state integration
+    zh:
+    - 链路级系统建模
+    - 频率同步
+    - 相位同步
+    - 帧同步
+    - 信道损伤仿真
+    - 接收机状态与动态可视化集成
+  features:
+    en:
+    - DVB-S2 waveform processing
+    - Frequency and phase synchronization
+    - Frame synchronization
+    - Constellation visualization
+    - Dynamic simulation-status display
+    zh:
+    - DVB-S2 波形处理
+    - 频率与相位同步
+    - 帧同步
+    - 星座图可视化
+    - 动态仿真状态显示
+  outcomes:
+    en:
+    - Integrated DVB-S2 receiver simulation workflow
+    - Visualization framework for synchronization and receiver states
+    zh:
+    - 形成集成式 DVB-S2 接收机仿真流程
+    - 形成同步过程与接收机状态的可视化框架
+  evidence:
+    en: Add representative waveforms, constellation plots, synchronization metrics, and public code or reports when ready.
+    zh: 后续补充代表性波形、星座图、同步指标，以及可公开代码或报告。
+  related_publications: []
+  related_awards: []
+  links:
+    github: ''
+    demo: ''
+    report: ''
+- id: citel-t-007
+  slug: citel-t-007
+  order: 3
+  featured: true
+  urls:
+    en: /projects/citel-t-007/
+    zh: /zh/projects/citel-t-007/
+  title:
+    en: CITEL-T-007 Protocol Sender
+    zh: CITEL-T-007 协议报文发送器
+  category:
+    en: Engineering
+    zh: 工程
+  period:
+    en: '2026'
+    zh: '2026'
+  status:
+    en: Completed
+    zh: 已完成
+  summary:
+    en: Desktop protocol generation and UDP transmission application developed with C++ and Qt.
+    zh: 基于 C++ 与 Qt 开发的桌面协议报文生成、UDP 发送与记录管理应用。
+  technologies:
+  - C++11
+  - Qt
+  - UDP
+  - SQLite
+  - XML
+  - qmake
+  overview:
+    en: CITEL-T-007 is a desktop application for XML-defined protocol parsing, field generation, UDP transmission, and transmission-record persistence.
+    zh: CITEL-T-007 是一个桌面应用，用于解析 XML 定义的协议、生成字段、通过 UDP 发送报文并持久化传输记录。
+  problem:
+    en: The application needs to turn course-defined XML protocol descriptions into reproducible transmitted bytes while preserving each send attempt as an auditable record.
+    zh: 该应用需要将课程定义的 XML 协议描述可靠转换为可复现的发送字节流，同时保留每次发送尝试的可审计记录。
+  contribution:
+    en:
+    - Software architecture
+    - XML protocol parsing
+    - Configurable data generation
+    - UDP transmission control
+    - SQLite persistence
+    - GUI integration and acceptance workflow
+    zh:
+    - 软件架构设计
+    - XML 协议解析
+    - 可配置数据生成
+    - UDP 发送控制
+    - SQLite 数据持久化
+    - GUI 集成与验收流程
+  architecture:
+    en:
+    - XML Protocol Definition
+    - Protocol Parser
+    - Protocol Definition
+    - Data Generator
+    - UDP Send Controller
+    - Transmission Repository
+    - Main Window
+    zh:
+    - XML 协议定义
+    - 协议解析器
+    - 协议内存定义
+    - 数据生成器
+    - UDP 发送控制器
+    - 传输记录仓库
+    - 主界面
+  features:
+    en:
+    - XML-based protocol definitions
+    - Configurable field generation
+    - UDP packet transmission
+    - SQLite transmission records
+    - Progress and run-status monitoring
+    zh:
+    - 基于 XML 的协议定义
+    - 可配置字段生成
+    - UDP 报文发送
+    - SQLite 传输记录
+    - 发送进度与运行状态监控
+  outcomes:
+    en:
+    - End-to-end XML-to-UDP desktop workflow
+    - Persistent transmission records suitable for acceptance and debugging
+    zh:
+    - 形成从 XML 协议定义到 UDP 发送的端到端桌面流程
+    - 形成可用于验收与调试的持久化传输记录
+  evidence:
+    en: Add the public repository, screenshots, acceptance evidence, and benchmark results if they are suitable for disclosure.
+    zh: 如适合公开，后续补充代码仓库、界面截图、验收证据与性能测试结果。
+  related_publications: []
+  related_awards: []
+  links:
+    github: ''
+    demo: ''
+    report: ''

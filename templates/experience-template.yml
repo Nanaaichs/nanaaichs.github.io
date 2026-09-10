@@ -1,11 +1,25 @@
-- id: unique-experience-id
-  title: Research Intern
-  organization: Organization
-  type: Internship
-  location: City, Country
-  period: "2027-06 - 2027-09"
-  summary: >
-    Concise summary of the work.
+- id: experience-id
+  title:
+    en: Research Intern
+    zh: 科研实习生
+  organization:
+    en: Organization
+    zh: 机构
+  type:
+    en: Internship
+    zh: 实习
+  location:
+    en: City, Country
+    zh: 城市
+  period:
+    en: 2027-06 - 2027-09
+    zh: 2027.06 - 2027.09
+  summary:
+    en: ''
+    zh: ''
   responsibilities:
-    - Specific responsibility or outcome
+    en:
+    - ''
+    zh:
+    - ''
   related_projects: []

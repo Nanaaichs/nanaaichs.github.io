@@ -1,3 +1,4 @@
+en:
 - name: Home
   url: /
 - name: Research
@@ -14,3 +15,20 @@
   url: /writing/
 - name: About
   url: /about/
+zh:
+- name: 首页
+  url: /zh/
+- name: 研究
+  url: /zh/research/
+- name: 项目
+  url: /zh/projects/
+- name: 论文成果
+  url: /zh/publications/
+- name: 经历
+  url: /zh/experience/
+- name: 奖项
+  url: /zh/awards/
+- name: 文章
+  url: /zh/writing/
+- name: 关于
+  url: /zh/about/

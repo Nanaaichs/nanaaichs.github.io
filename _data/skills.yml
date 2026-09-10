@@ -1,31 +1,56 @@
-- category: Communication Systems
+- category:
+    en: Communication Systems
+    zh: 通信系统
   items:
-    - 5G NR
-    - NR NTN
-    - OFDM
-    - Satellite Communications
-    - DVB-S2
-    - DVB-RCS
-
-- category: Programming
+  - en: 5G NR
+    zh: 5G NR
+  - en: NR NTN
+    zh: NR NTN
+  - en: OFDM
+    zh: OFDM
+  - en: Satellite Communications
+    zh: 卫星通信
+  - en: DVB-S2
+    zh: DVB-S2
+  - en: DVB-RCS
+    zh: DVB-RCS
+- category:
+    en: Programming
+    zh: 编程语言
   items:
-    - C
-    - C++
-    - MATLAB
-    - Python
-
-- category: Software and Tools
+  - en: C
+    zh: C
+  - en: C++
+    zh: C++
+  - en: MATLAB
+    zh: MATLAB
+  - en: Python
+    zh: Python
+- category:
+    en: Software and Tools
+    zh: 软件与工具
   items:
-    - Qt
-    - SQLite
-    - Git
-    - GitHub
-    - VS Code
-    - qmake
-
-- category: Engineering
+  - en: Qt
+    zh: Qt
+  - en: SQLite
+    zh: SQLite
+  - en: Git
+    zh: Git
+  - en: GitHub
+    zh: GitHub
+  - en: VS Code
+    zh: VS Code
+  - en: qmake
+    zh: qmake
+- category:
+    en: Engineering
+    zh: 工程能力
   items:
-    - Communication-System Simulation
-    - Physical-Layer Signal Processing
-    - UDP Network Programming
-    - Protocol Parsing
+  - en: Communication-System Simulation
+    zh: 通信系统仿真
+  - en: Physical-Layer Signal Processing
+    zh: 物理层信号处理
+  - en: UDP Network Programming
+    zh: UDP 网络编程
+  - en: Protocol Parsing
+    zh: 协议解析

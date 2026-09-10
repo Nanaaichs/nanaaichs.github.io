@@ -1,11 +1,18 @@
-- id: unique-award-id
-  title: "Award Name"
-  organization: "Organization"
+- id: award-id
+  title:
+    en: Award Name
+    zh: 奖项名称
+  organization:
+    en: Organization
+    zh: 组织方
   year: 2027
-  level: National
-  ranking: ""
-  featured: true
-  description: ""
+  level:
+    en: National
+    zh: 国家级
+  ranking: ''
+  description:
+    en: ''
+    zh: ''
   project_ids:
-    - leo-ntn-access
-  evidence: ""
+  - project-id
+  evidence: ''

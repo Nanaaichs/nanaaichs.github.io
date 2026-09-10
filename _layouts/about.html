@@ -1,0 +1,9 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: 'en' %}{% assign profile = site.data.profile %}{% assign ui = site.data.ui[lang] %}
+<div class="container page-shell"><p class="eyebrow">{{ ui.about.eyebrow }}</p><h1>{{ ui.about.title }}</h1><p class="lead">{{ profile.bio[lang] }}</p>
+<h2>{{ ui.about.education }}</h2><div class="stack-list compact-list">{% for education in site.data.education %}<article class="list-item"><p class="meta">{{ education.period[lang] }}</p><h3>{{ education.degree[lang] }}{% if education.field[lang] != '' %} · {{ education.field[lang] }}{% endif %}</h3><p><strong>{{ education.institution[lang] }}</strong>{% if education.location %} · {{ education.location[lang] }}{% endif %}</p><p>{{ education.description[lang] }}</p>{% if education.advisor[lang] != '' %}<p><strong>{{ ui.about.advisor }}:</strong> {{ education.advisor[lang] }}</p>{% endif %}{% if education.thesis[lang] != '' %}<p><strong>{{ ui.about.thesis }}:</strong> {{ education.thesis[lang] }}</p>{% endif %}</article>{% endfor %}</div>
+<h2>{{ ui.about.skills }}</h2><div class="skill-grid">{% for group in site.data.skills %}<section class="skill-group"><h3>{{ group.category[lang] }}</h3><div class="tag-row">{% for item in group.items %}<span class="tag">{{ item[lang] }}</span>{% endfor %}</div></section>{% endfor %}</div>
+<h2>{{ ui.about.links }}</h2><ul class="plain-list">{% for link in site.data.links %}{% if link.enabled %}<li><a href="{{ link.url }}">{{ link.name[lang] }}</a></li>{% endif %}{% endfor %}</ul>
+</div>

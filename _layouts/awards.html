@@ -1,0 +1,6 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: 'en' %}{% assign ui = site.data.ui[lang] %}
+<div class="container page-shell"><p class="eyebrow">{{ ui.awards.eyebrow }}</p><h1>{{ ui.awards.title }}</h1><p class="lead">{{ ui.awards.lead }}</p>
+{% if site.data.awards == empty %}<p class="empty-state">{{ ui.awards.empty }}</p>{% else %}<div class="stack-list">{% assign sorted_awards = site.data.awards | sort: "year" | reverse %}{% for award in sorted_awards %}<article class="list-item"><p class="meta">{{ award.year }}{% if award.level %} · {{ award.level[lang] }}{% endif %}{% if award.ranking != '' %} · {{ award.ranking }}{% endif %}</p><h2>{{ award.title[lang] }}</h2><p>{{ award.organization[lang] }}</p>{% if award.description %}<p>{{ award.description[lang] }}</p>{% endif %}</article>{% endfor %}</div>{% endif %}</div>

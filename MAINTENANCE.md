@@ -1,185 +1,191 @@
-# 个人主页维护手册
+# 中英文双语个人主页维护手册
 
-## 1. 部署这套版本前
+## 1. 网站结构
 
-如果现有仓库里还存在旧结构，请先备份，然后删除会冲突的旧文件：
+本版本使用同一个 GitHub Pages 仓库维护中英文两套展示：
 
-- 旧的 `index.html`（本版本使用 `index.md`）
-- 旧的 `_data/projects.yml`（本版本使用 `_projects/` Collection）
-- 任何与本压缩包同名但内容不同的旧 Layout / Include
+- 英文首页：`https://nanaaichs.github.io/`
+- 中文首页：`https://nanaaichs.github.io/zh/`
 
-GitHub Pages 设置保持：`main` 分支 + `/(root)`。
+导航栏右侧提供 `中文 / EN` 切换。同一项结构化履历数据只维护一份，中英文通过同一 YAML 条目的 `en` / `zh` 字段读取。
 
-## 2. 日常维护对应关系
+## 2. 部署
 
-| 要更新的内容 | 只需要改哪里 |
+把本压缩包内容放到 `nanaaichs.github.io` 仓库根目录。GitHub Pages 保持：
+
+`Settings → Pages → Deploy from a branch → main → /(root)`
+
+如果旧仓库还存在旧版 `_data/projects.yml`、旧 `_projects/*.md` 或旧 Layout，请以本版本为准覆盖。建议先备份旧仓库。
+
+## 3. 日常维护表
+
+| 内容 | 维护文件 |
 | --- | --- |
 | 姓名、身份、学校、简介 | `_data/profile.yml` |
 | 研究方向 | `_data/research.yml` |
 | 教育经历 | `_data/education.yml` |
-| 科研/实习/工作经历 | `_data/experience.yml` |
+| 科研 / 实习 / 工作经历 | `_data/experience.yml` |
 | 技术栈 | `_data/skills.yml` |
-| 外部链接、CV入口 | `_data/links.yml` |
-| 新项目 | `_projects/新项目.md` |
+| 项目内容 | `_data/projects.yml` |
 | 论文 | `_data/publications.yml` |
 | 奖项 | `_data/awards.yml` |
-| 博客/技术文章 | `_posts/YYYY-MM-DD-slug.md` |
-| 网站导航 | `_data/navigation.yml` |
-| 视觉样式 | `assets/css/style.css` |
+| GitHub / Scholar / ORCID / CV | `_data/links.yml` |
+| 中英文导航名称 | `_data/navigation.yml` |
+| 英文文章 | `_posts/` 中 `lang: en` 的文章 |
+| 中文文章 | `_posts/` 中 `lang: zh` 的文章 |
+| 页面文字标签 | `_data/ui.yml` |
+| 样式 | `assets/css/style.css` |
 
-原则：同一项事实只维护一次，不要在多个页面重复手写。
+## 4. 双语数据怎么写
 
-## 3. 新增项目
+例如个人简介：
 
-复制 `templates/project-template.md` 到：
+```yaml
+headline:
+  en: Satellite Communications · 5G NR NTN · Physical Layer
+  zh: 卫星通信 · 5G NR NTN · 物理层
+```
 
-`_projects/项目英文slug.md`
+以后修改这一个条目，英文与中文页面会同步读取各自字段。
 
-例如：
+原则：**事实只维护一次，语言分别写在同一个数据项内。**
 
-`_projects/leo-channel-prediction.md`
+## 5. 新增项目
 
-重点维护：
+项目真正的数据只写在 `_data/projects.yml`。复制 `templates/project-data-template.yml` 的结构，在列表末尾新增一项。
 
-- `summary`：一句话解释项目价值
-- `problem`（正文）：解决什么问题
-- `My Contribution`：你本人具体做了什么
-- `technologies`：实际使用过的技术
-- `outcomes`：结果、交付物、性能、论文、代码等
-- `links`：公开 GitHub / Demo / Report
+除了数据条目，还需要两个很薄的“路由文件”，它们不存项目内容，只负责生成中英文 URL：
 
-`featured: true` 会让项目自动出现在首页。
+- `_projects/<slug>-en.md`
+- `_projects/<slug>-zh.md`
 
-## 4. 新增论文
+可复制 `templates/project-route-en.md` 和 `templates/project-route-zh.md`，把 `PROJECT_ID`、`PROJECT_SLUG` 替换掉即可。
 
-在 `_data/publications.yml` 中添加一条。第一次添加时，把文件里的 `[]` 替换为条目列表。
+也可以运行：
 
-模板见 `templates/publication-template.yml`。
-
-状态必须真实区分：
-
-- Published
-- Accepted
-- Under Review
-- Submitted
-- In Preparation
-
-公开主页不要把 Under Review / Submitted 写成已发表成果。
-
-如果论文属于某个项目，在 `project_ids` 中写项目 `id`；同时可在对应 `_projects/*.md` 的 `related_publications` 中写论文 id。
-
-## 5. 新增奖项
-
-在 `_data/awards.yml` 中添加一条，模板见 `templates/award-template.yml`。
-
-建议内部维护：
-
-- 奖项名称
-- 组织方
-- 年份
-- 级别
-- 排名（如适用）
-- 关联项目
-- 公开证据链接
-
-公开仓库不要上传未脱敏的身份证件、证书编号、家庭住址等敏感信息。
-
-## 6. 新增博客文章
-
-创建：
-
-`_posts/YYYY-MM-DD-英文slug.md`
+```bash
+python scripts/new_project_routes.py PROJECT_ID PROJECT_SLUG
+```
 
 例如：
 
-`_posts/2026-10-01-understanding-nr-ntn.md`
+```bash
+python scripts/new_project_routes.py leo-channel-prediction leo-channel-prediction
+```
 
-使用 `templates/post-template.md` 的 Front Matter。提交后，文章会自动出现在 `/writing/`，最新文章也会自动进入首页。
+`featured: true` 会让项目自动出现在中英文首页的代表项目区域。
 
-## 7. 更新技术栈
+## 6. 新增论文
 
-只改 `_data/skills.yml`。
+在 `_data/publications.yml` 添加一条。中英文标题、类型、状态使用双语字段；作者、期刊名、DOI 等通常无需翻译。
 
-不建议写“精通 / 95% / 五星”等主观等级。更好的维护方式是：技术栈负责列能力，项目页负责提供实际使用证据。
+模板：`templates/publication-template.yml`
 
-## 8. 更新 CV
+论文状态必须真实区分：
 
-把公开版 CV 放到：
+- Published / 已发表
+- Accepted / 已录用
+- Under Review / 审稿中
+- Submitted / 已投稿
+- In Preparation / 准备中
 
-`assets/pdf/cv.pdf`
+## 7. 新增奖项
 
-然后把 `_data/links.yml` 中 CV 的：
+在 `_data/awards.yml` 添加一条，模板见 `templates/award-template.yml`。
 
-`enabled: false`
+建议维护名称、组织方、年份、级别、排名、关联项目和公开证据。公开仓库不要放未脱敏证书编号、身份证件、家庭住址等敏感信息。
 
-改为：
+## 8. 新增经历
 
-`enabled: true`
+在 `_data/experience.yml` 增加条目。中英文标题、组织、类型、地点、简介、职责均写在同一条记录中。
 
-CV 必须是适合公开的版本。
+模板：`templates/experience-template.yml`
 
-## 9. 项目、论文、奖项之间的关联
+## 9. 技术栈
 
-本版本预留了 id 关联：
+只改 `_data/skills.yml`。不建议使用“精通”“95%”“五星”等主观等级；项目详情负责证明技术实际用在哪里。
 
-- Project：`_projects/*.md` 中的 `id`
-- Publication：`_data/publications.yml` 中的 `id`
-- Award：`_data/awards.yml` 中的 `id`
+## 10. 博客 / Writing
+
+博客与履历数据不同，**不要求中英文强制一一翻译**。
+
+英文文章模板：`templates/post-template-en.md`
+
+中文文章模板：`templates/post-template-zh.md`
+
+英文文章示例 Front Matter：
+
+```yaml
+lang: en
+permalink: /writing/2026/10/01/example/
+```
+
+中文文章：
+
+```yaml
+lang: zh
+permalink: /zh/writing/2026/10/01/example/
+```
+
+如果一篇文章确实有对应翻译，可在两篇文章中分别写 `alternate_url`，导航栏的语言按钮就会直接跳到对应译文；没有译文时，语言按钮默认回到另一语言首页。
+
+## 11. CV 与外部链接
+
+把公开版 CV 放到 `assets/pdf/cv.pdf`，再把 `_data/links.yml` 中 CV 的 `enabled` 改为 `true`。
+
+Google Scholar、ORCID 等同理。链接本身只维护一次，名称可中英文分别显示。
+
+## 12. 项目、论文、奖项关联
+
+项目使用 `id`；论文和奖项也使用 `id`。项目数据中的：
+
+- `related_publications`
+- `related_awards`
+
+可以写对应 id。项目详情页会自动读取并以当前语言显示关联成果。
+
+## 13. 页面文件为什么有两套，但数据没有两套
 
 例如：
 
-Project `leo-ntn-access`
-→ Publication `ntn-sync-2027`
-→ Award `competition-2027`
+- `projects.md`：英文项目总览路由
+- `zh/projects.md`：中文项目总览路由
 
-项目详情页会根据 `related_publications` / `related_awards` 自动显示关联成果。
+它们几乎只有 Front Matter，真正项目内容都来自同一个 `_data/projects.yml`。
 
-## 10. 推荐维护节奏
+因此新增或修改项目正文时，不需要维护两份页面内容。
 
-每完成一项成果就立即更新，不要等到评奖或求职前再补历史。
+## 14. 推荐维护节奏
 
-建议至少：
-
-- 项目阶段性结果：随时更新
+- 新项目阶段性成果：及时更新
 - 论文状态变化：立即更新
 - 奖项：获奖后立即更新
-- 技术栈：真正用于项目后再加入
-- CV：每 2–3 个月或重要成果后更新
-- 首页 Featured Projects：每半年检查一次
+- 技术栈：真正用于项目以后再加入
+- CV：重要成果后更新，或每 2–3 个月检查一次
+- 中英文关键履历字段：尽量同时补齐
+- 博客：按内容需要选择中文、英文或双语
 
-## 11. GitHub 网页端维护
+## 15. GitHub 网页端与本地维护
 
-小改动可以直接：
+小改动可以直接在 GitHub 网页：`文件 → Edit → Commit changes`。
 
-`仓库 → 文件 → Edit → Commit changes`
-
-较大修改建议本地 Clone 后用 VS Code 编辑，再：
+较大修改建议 Clone 后用 VS Code：
 
 ```bash
 git add .
-git commit -m "Update portfolio content"
+git commit -m "Update bilingual portfolio"
 git push
 ```
 
-GitHub Pages 通常会自动重新部署。部署状态在 `Actions` 中查看。
+部署状态在 GitHub `Actions` 中查看。
 
-## 12. 可选：本地预览
+## 16. 本地预览（可选）
 
-如果以后希望在提交前本地预览，需要安装 Ruby/Bundler，然后在仓库目录：
+安装 Ruby / Bundler 后：
 
 ```bash
 bundle install
 bundle exec jekyll serve
 ```
 
-浏览器打开 Jekyll 提示的本地地址即可。这个步骤不是日常维护的必需条件。
-
-## 13. 求职 / 评奖时如何使用
-
-这套站点的数据结构有三个目标：
-
-1. 主页：30 秒快速了解你是谁、研究什么、做过什么。
-2. 详情页：项目、论文、奖项均可继续追溯到证据。
-3. 数据源：未来制作中文简历、英文 Resume、Academic CV、评奖材料时，从 `_data/` 与 `_projects/` 抽取，不再靠记忆重新整理。
-
-优先维护“事实 + 个人贡献 + 结果 + 证据”，少维护空泛形容词。
+然后打开 Jekyll 给出的本地地址。日常使用 GitHub 网页维护时，这一步不是必需的。

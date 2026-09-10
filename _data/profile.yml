@@ -1,14 +1,22 @@
-name_zh: 黎山
-name_en: Li Shan
-position: Ph.D. Student
-institution: Beijing Jiaotong University
-location: Beijing, China
-headline: Satellite Communications · 5G NR NTN · Physical Layer
-short_bio: >
-  Ph.D. student focusing on satellite communications, 5G NR Non-Terrestrial Networks,
-  physical-layer signal processing, and communication system simulation.
-bio: >
-  My work focuses on satellite-terrestrial integrated communication systems, with particular
-  interest in 5G NR NTN, LEO satellite communications, synchronization, receiver processing,
-  and reproducible communication-system simulation.
-email: ""
+name:
+  en: Li Shan
+  zh: 黎山
+position:
+  en: Ph.D. Student
+  zh: 博士研究生
+institution:
+  en: Beijing Jiaotong University
+  zh: 北京交通大学
+location:
+  en: Beijing, China
+  zh: 中国 · 北京
+headline:
+  en: Satellite Communications · 5G NR NTN · Physical Layer
+  zh: 卫星通信 · 5G NR NTN · 物理层
+short_bio:
+  en: Ph.D. student focusing on satellite communications, 5G NR Non-Terrestrial Networks, physical-layer signal processing, and communication-system simulation.
+  zh: 博士研究生，研究方向主要包括卫星通信、5G NR 非地面网络（NTN）、物理层信号处理与通信系统仿真。
+bio:
+  en: My work focuses on satellite-terrestrial integrated communication systems, with particular interest in 5G NR NTN, LEO satellite communications, synchronization, receiver processing, and reproducible communication-system simulation.
+  zh: 主要研究卫星与地面融合通信系统，重点关注 5G NR NTN、低轨卫星通信、同步与接收机处理，以及可复现的通信系统仿真。
+email: ''

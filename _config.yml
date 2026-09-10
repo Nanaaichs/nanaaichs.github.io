@@ -1,34 +1,27 @@
-title: 黎山
+title: Li Shan
 description: Personal academic website and engineering portfolio
-url: "https://nanaaichs.github.io"
-baseurl: ""
-lang: zh-CN
+url: https://nanaaichs.github.io
+baseurl: ''
+lang: en
 markdown: kramdown
-permalink: /writing/:year/:month/:day/:title/
-
-author:
-  name: 黎山
-
 collections:
   projects:
     output: true
-    permalink: /projects/:name/
-
 defaults:
-  - scope:
-      path: ""
-      type: projects
-    values:
-      layout: project
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-
+- scope:
+    path: ''
+    type: projects
+  values:
+    layout: project
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
 exclude:
-  - README.md
-  - MAINTENANCE.md
-  - templates
-  - Gemfile
-  - Gemfile.lock
+- README.md
+- MAINTENANCE.md
+- templates
+- scripts
+- Gemfile
+- Gemfile.lock

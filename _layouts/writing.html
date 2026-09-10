@@ -1,0 +1,6 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: 'en' %}{% assign ui = site.data.ui[lang] %}{% assign lang_posts = site.posts | where: "lang", lang %}
+<div class="container page-shell"><p class="eyebrow">{{ ui.writing.eyebrow }}</p><h1>{{ ui.writing.title }}</h1><p class="lead">{{ ui.writing.lead }}</p>
+{% if lang_posts == empty %}<p class="empty-state">{{ ui.writing.empty }}</p>{% else %}<div class="stack-list">{% for post in lang_posts %}<article class="list-item"><p class="meta">{{ post.date | date: "%Y-%m-%d" }}{% if post.category %} · {{ post.category }}{% endif %}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>{% if post.summary %}<p>{{ post.summary }}</p>{% else %}<p>{{ post.excerpt | strip_html | truncate: 220 }}</p>{% endif %}</article>{% endfor %}</div>{% endif %}</div>

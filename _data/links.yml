@@ -1,15 +1,20 @@
-- name: GitHub
+- name:
+    en: GitHub
+    zh: GitHub
   url: https://github.com/Nanaaichs
   enabled: true
-
-- name: Google Scholar
-  url: ""
+- name:
+    en: Google Scholar
+    zh: Google Scholar
+  url: ''
   enabled: false
-
-- name: ORCID
-  url: ""
+- name:
+    en: ORCID
+    zh: ORCID
+  url: ''
   enabled: false
-
-- name: CV
+- name:
+    en: CV
+    zh: 简历 / CV
   url: /assets/pdf/cv.pdf
   enabled: false
