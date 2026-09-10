@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{{ site.lang | default: 'zh-CN' }}">
 
 <head>
     <meta charset="UTF-8">
@@ -9,9 +9,9 @@
 
     <title>
         {% if page.title %}
-            {{ page.title }} | {{ site.title }}
+        {{ page.title }} | {{ site.title }}
         {% else %}
-            {{ site.title }}
+        {{ site.title }}
         {% endif %}
     </title>
 
@@ -26,16 +26,10 @@
 
 {% include header.html %}
 
-<main>
-
-    <section class="page-content">
-        <div class="container">
-
-            {{ content }}
-
-        </div>
-    </section>
-
+<main class="page-content">
+    <div class="container">
+        {{ content }}
+    </div>
 </main>
 
 {% include footer.html %}
