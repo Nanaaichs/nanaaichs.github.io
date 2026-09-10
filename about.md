@@ -9,20 +9,21 @@ permalink: /about/
 
 # About Me
 
-I am a Ph.D. student at Beijing Jiaotong University.
+## {{ site.data.profile.name_zh }}
 
-My research interests include satellite communications,
-5G NR Non-Terrestrial Networks (NTN),
-physical-layer signal processing,
-and communication system simulation.
+**{{ site.data.profile.position }} · {{ site.data.profile.university }}**
+
+{{ site.data.profile.bio }}
 
 ## Research Interests
 
-- Satellite Communications
-- 5G NR NTN
-- LEO Satellite Networks
-- OFDM and Physical-Layer Signal Processing
-- Communication System Simulation
+{% for interest in site.data.profile.research_interests %}
+- {{ interest }}
+{% endfor %}
+
+## Links
+
+- [GitHub]({{ site.data.profile.github.url }})
 
 </div>
 </section>
