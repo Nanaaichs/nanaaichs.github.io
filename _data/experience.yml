@@ -1,0 +1,17 @@
+- id: phd-research
+  title: Ph.D. Research
+  organization: Beijing Jiaotong University
+  type: Research
+  location: Beijing, China
+  period: Present
+  summary: >
+    Research on satellite communications, 5G NR NTN, receiver processing,
+    and communication-system simulation.
+  responsibilities:
+    - Physical-layer modeling and simulation
+    - 5G NR NTN access-procedure research
+    - OFDM synchronization and receiver processing
+    - LEO satellite communication-system analysis
+  related_projects:
+    - leo-ntn-access
+    - dvb-s2-simulator

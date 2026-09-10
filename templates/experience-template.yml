@@ -1,0 +1,11 @@
+- id: unique-experience-id
+  title: Research Intern
+  organization: Organization
+  type: Internship
+  location: City, Country
+  period: "2027-06 - 2027-09"
+  summary: >
+    Concise summary of the work.
+  responsibilities:
+    - Specific responsibility or outcome
+  related_projects: []
