@@ -4,9 +4,6 @@ title: About
 permalink: /about/
 ---
 
-<section>
-<div class="container">
-
 # About Me
 
 ## {{ site.data.profile.name_zh }}
@@ -24,6 +21,3 @@ permalink: /about/
 ## Links
 
 - [GitHub]({{ site.data.profile.github.url }})
-
-</div>
-</section>
