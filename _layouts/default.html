@@ -27,20 +27,10 @@
 {% include header.html %}
 
 <main>
-
     {{ content }}
-
 </main>
 
-<footer>
-
-    <div class="container">
-
-        © {{ site.time | date: "%Y" }} {{ site.author.name }}
-
-    </div>
-
-</footer>
+{% include footer.html %}
 
 </body>
 
